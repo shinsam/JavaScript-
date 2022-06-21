@@ -40,7 +40,31 @@
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/babel">
+        const displayTitle = () => {
+            //dom 객체를찾아와라
+            // css 선택자를 넘겨준다.
+            //document.getelementbyID
+            const hdom = document.querySelector("header");
+            const kordayname = ['일','월','화','수','목','금','토'];
+           // hdom.innerHTML = `<h1>내일은 ${kordayname[new Date().getDay()+1 ]}요일입니다.`;
+            /// 위의 코드를 리액트로 바꿔보자
+            // 리액트에서는 따옴표 필요없다
+            const Greeting = () => <h1>내일은 {kordayname[new Date().getDay()+1]}요일입니다.</h1>;
+            ReactDOM.render(<Greeting/>, hdom);
+        }
 
+        const displayImage = () => {
+            const divdom = document.getElementsByTagName("div")[0];
+            const imageName = Math.floor(Math.random()*10+1);       
+            
+            const imageValue = `../jsexam2/images/${imageName}.jpg`;
+            const size = 200;
+            
+            //이미지를 출력해주는 컴포넌트를 함수로 만든다.
+            const Doll = () => <img src={imageValue} width={size} />
+            ReactDOM.render(<Doll/> , divdom)
+     
+        }
     </script>
 </body>
 

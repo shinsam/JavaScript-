@@ -23,12 +23,26 @@
 <body>
     <h1>React 맛보기 예제(1)</h1>
     <hr>
-    <div id="myReactApp"></div>
+    <div id="myReactApp1"></div>
+    <div id="myReactApp2"></div>
+    <div id="myReactApp3"></div>
+    <div id="myReactApp4"></div>
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/babel">
-
+        function Component1(props) {
+            return <h1>{props.greeting}</h1>
+        }
+        const container1 = document.getElementById('myReactApp1');
+        ReactDOM.render(<Component1 greeting="컴포넌트를 일반 함수로 구현함" />, container1);
+//------------------------------------------------------------------------------
+        const Component2 = function (props2) {
+            return <h1>{props2.greeting}</h1>
+        }
+        const container2 = document.getElementById('myReactApp2');
+        ReactDOM.render(<Component2 greeting="컴포넌트를 익명 함수로 구현함" />, container2);
+        //------------------------------------------------------------------------------
     </script>
 </body>
 
