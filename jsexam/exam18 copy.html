@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선언적 함수</title>
+<script>
+	function dw(msg){
+		document.write("<br>"+msg+"<br>")
+	}
+
+	function kindShape(){
+		document.write("**도형의 넓이**<br>");
+	} 
+	function circleSize(r){
+		document.write("원의 넓이 = " + (r*r*3.14) +"<br>");
+	}
+	function getSquareSize(bottom, height){
+	   return bottom * height;      
+	}
+	function printData(p1,p2,p3){
+		alert(p1)
+		document.write(p2)
+		console.log(p3)
+	}
+	// kindShape();
+	// circleSize(10);
+	// document.write("사각형의 넓이 = " + getSquareSize(4,5)+"<br>");
+	// printData("SEOUL" , "Robot"+"<br>", "test")
+	// printData()
+	function printAll(){
+		document.write(arguments.length);
+
+		for(var i = 0; i< arguments.length;i++)
+		{
+			console.log(arguments[i]);
+			dw(arguments[i]);
+		}
+		
+	}
+
+	// printAll();
+	// printAll(1,2,3);
+	// printAll(100,'abc', true, 3.14);
+
+
+	function hop( p ){
+		if (typeof p ==  'function')
+			p('고차함수');
+		else	
+			console.log(p)	;
+	}
+
+	hop(100); //숫자 전달
+	hop('가나다'); //문자열 전달
+	hop([10,20,30]) 
+	function myF(msg){
+		document.write("<h2>" + msg + "</h2><br>");
+	}
+	hop(myF); //함수를 전달한다---고차함수
+	hop(function(msg){
+		document.write("<hr>익명함수 전달" + msg +"<br>");
+		document.write("<hr>익명함수 전달" + msg +"<br>");
+	});
+	hop(myF()); //myF는 리턴값이 없어. undefined
+
+	//매개변수가 선언되었더라도 값이 들어오지 않아도 에러가 나지는 않는다.
+	
+
+	var ary = [4,20,7,15,30];
+	
+
+	let text = "<p>Browser CodeName: " + navigator.appCodeName + "</p>" +
+	"<p>Browser Name: " + navigator.appName + "</p>" +
+	"<p>Browser Version: " + navigator.appVersion + "</p>" +
+	"<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>" +
+	"<p>Browser Language: " + navigator.language + "</p>" +
+	"<p>Browser Online: " + navigator.onLine + "</p>" +
+	"<p>Platform: " + navigator.platform + "</p>" +
+	"<p>User-agent header: " + navigator.userAgent + "</p>";
+
+
+	document.write("<h2>" + ary + "</h2><br>");
+	document.write("<h2>" + ary.sort() + "</h2><br>");
+	document.write(text);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

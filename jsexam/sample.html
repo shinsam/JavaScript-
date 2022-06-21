@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선언적 함수</title>
+</head>
+<body onload="window.alert('오늘은' +  getKorDay() + '입니다.')" >
+    
+    <script>
+    document.write('오늘은 ' +  getKorDay() + '요일 입니다.')
+    
+        function getKorDay(){
+            var d = new Date();
+            var kordayname = ['일','월','화','수','목','금','토']
+            return kordayname[d.getDay()];
+        }
+    </script>
+</body>
