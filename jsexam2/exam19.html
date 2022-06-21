@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+//화살표함수로 바꾼 예제
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
@@ -11,12 +11,17 @@
     <hr>
     <script src="util.js"></script>
     <script>
+        // 화살표를 이용해서 함수 선언, 
+        // arg받지 않겠다.arg받지 않겠다.a
+        // 리턴값없다
         let func1 = () => {
             writeColor("ES6", "h3", "green");
         }
         func1();
         func1();
         hr();
+
+        //가변 args받는 형태
         const func2 = (...nums) => {
             let result1 = nums.map((item) => item * 100);
             let result2 = nums.reduce((exprvalue, item) => exprvalue + item);
