@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 리액트 사용 준비 -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        .greeting {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="t1"></div>
+    <hr>
+    <div id="t2"></div>
+    <hr>
+    <div id="t3"></div>
+    <hr>
+    <div id="t4"></div>
+    <hr>
+    <div id="t5"></div>
+    <hr>
+    <div id="t6"></div>
+    <hr>
+    <div id="t7"></div>
+    <hr>
+    <div id="t8"></div>
+    <!-- 리액트를 사용하는 코드 입력 -->
+    <script type="text/babel">
+        const Test1 = () => {
+
+        }
+
+        const Test2 = () => {
+
+        }
+        const Test3 = () => {
+
+        }
+        const Test4 = () => {
+
+        }
+        const Test5 = () => {
+
+        }
+        const Test6 = (p) => {
+
+        }
+        const Test7 = () => {
+
+        }
+        const Test8 = () => {
+            const ary = [{ imgsrc: '../jsexam2/images/cloud.png', size: 200 },
+            { imgsrc: '../jsexam2/images/sun.png', size: 400 },
+            { imgsrc: '../jsexam2/images/rain.png', size: 100 }
+            ]
+            return <div>{ary.map((item) => <img src={item.imgsrc} width={item.size} />)}</div>;
+        }
+        ReactDOM.render(<Test1 />, document.getElementById('t1'));
+        ReactDOM.render(<Test2 />, document.getElementById('t2'));
+        ReactDOM.render(<Test3 />, document.getElementById('t3'));
+        ReactDOM.render(<Test4 />, document.getElementById('t4'));
+        ReactDOM.render(<Test5 />, document.getElementById('t5'));
+        ReactDOM.render(<Test6 friends="도우너, 또치, 둘리" />, document.getElementById('t6'));
+        ReactDOM.render(<Test7 />, document.getElementById('t7'));
+        ReactDOM.render(<Test8 />, document.getElementById('t8'));
+    </script>
+</body>
+
+</html>
