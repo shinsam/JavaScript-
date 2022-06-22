@@ -15,10 +15,14 @@
     </style>
 </head>
 
-<body id="t1">
+<body >
+    <div id="t1"></div>
+    <div id="t2"></div>
+
+
     <!-- 리액트를 사용하는 코드 입력 -->
     <script type="text/babel">
-        function Best(props) {
+        function Best(props) { //Best 첫글자는 꼭 대문자
             return <h2 className="st1">베스트 회원 {props.memberName}님!</h2>;
         }
 
@@ -30,6 +34,17 @@
         }
         // t1 이라는 id 값을 갖는 태그의 DOM 객체에 Member 컴포넌트를 
         // 컨텐트로 출력해 보자.
+        ReactDOM.render(<Member />, document.getElementById('t1'));
+        function tick() {
+            const element = (
+                <div>
+                    <h1>여러분 오늘도 수고 많았어용~~</h1>
+                    <h2>현재 시간 :  {new Date().toLocaleString()}.</h2>
+                </div>
+            );
+            ReactDOM.render(element, document.getElementById('t2'));
+        }
+        setInterval(tick, 1000);
     </script>
 </body>
 

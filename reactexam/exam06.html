@@ -15,15 +15,16 @@
   <!-- 리액트를 사용하는 코드 입력 -->
   <script type="text/babel">
     // 상수 선언하기
-    const name = '둘리'
-    const imgUrl = 'https://img.mbn.co.kr/filewww/news/2014/06/20/1403246858.jpg'
+    const name = '둘리';
+    const imgUrl = 'https://img.mbn.co.kr/filewww/news/2014/06/20/1403246858.jpg';
 
-    // 컴포넌트와 컨테이너 생성하기
+    // 컴포넌트와 컨테이너 생성하기 *****JSX************* 좋은 예제
     const component = <div>
       <h1>{name} 님 안녕하세요!</h1>
       <img src={imgUrl} />
     </div>
-    const container = document.getElementById('root')
+
+    const container = document.getElementById('root');
 
     // 출력하기
     ReactDOM.render(component, container)
