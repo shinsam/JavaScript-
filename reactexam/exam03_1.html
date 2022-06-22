@@ -30,19 +30,31 @@
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script type="text/babel">
+    <script type="text/babel"> //Babel is a JavaScript compiler.
         function Component1(props) {
-            return <h1>{props.greeting}</h1>
+            return <h1>{props.greeting}</h1>  //JSX기법 , javascript를 이용하여 구현
         }
         const container1 = document.getElementById('myReactApp1');
         ReactDOM.render(<Component1 greeting="컴포넌트를 일반 함수로 구현함" />, container1);
-//------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------
         const Component2 = function (props2) {
             return <h1>{props2.greeting}</h1>
         }
         const container2 = document.getElementById('myReactApp2');
         ReactDOM.render(<Component2 greeting="컴포넌트를 익명 함수로 구현함" />, container2);
         //------------------------------------------------------------------------------
+        const Component3 = (props3) => <h1>{props3.greeting}</h1>
+        const container3 = document.getElementById('myReactApp3');
+        ReactDOM.render(<Component3 greeting="컴포넌트를 화살표 함수로 구현함" />, container3);
+        //-------------------------------------------------------------------------------
+        class Component4 extends React.Component {
+            render() {
+                return <h1>{this.props.greeting}</h1>
+            }
+        }
+        
+        const container4 = document.getElementById('myReactApp4');
+        ReactDOM.render(<Component4 greeting="컴포넌트를 클래스로 구현함" />, container4);
     </script>
 </body>
 
